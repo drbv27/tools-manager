@@ -8,15 +8,15 @@ Este proyecto es una **aplicación full-stack moderna y responsiva** diseñada p
 - **Gestión de Inventario de Herramientas:** Panel de administración dedicado para el **CRUD** (Crear, Leer, Actualizar, Eliminar) de herramientas, incluyendo gestión de stock y **subida optimizada de imágenes a Cloudinary**.
 - **Sistema de Solicitudes Flexible:** Los empleados pueden crear solicitudes de herramientas con justificaciones. Los administradores pueden revisar, **aprobar, rechazar o marcar como devueltas** estas solicitudes, con actualización automática del inventario.
 - **Dashboards Adaptativos:**
-    - **Dashboard de Usuario:** Vista personalizada para cada empleado con un resumen de _sus propias_ solicitudes y un listado detallado.
-    - **Admin Dashboard:** Un panel general para administradores con **estadísticas globales** de la aplicación (solicitudes totales, herramientas disponibles/en préstamo, resumen de usuarios).
+  - **Dashboard de Usuario:** Vista personalizada para cada empleado con un resumen de _sus propias_ solicitudes y un listado detallado.
+  - **Admin Dashboard:** Un panel general para administradores con **estadísticas globales** de la aplicación (solicitudes totales, herramientas disponibles/en préstamo, resumen de usuarios).
 - **Notificaciones Integradas:** Sistema de notificaciones por polling para mantener a los usuarios informados sobre el estado de sus solicitudes y a los administradores sobre nuevas peticiones.
 - **Experiencia de Usuario (UX) Superior:**
-    - **Diseño Responsivo:** Interfaz adaptada a móviles y escritorio, con uso de tablas y tarjetas según la resolución.
-    - **Temas Claro/Oscuro:** Selector de tema para personalizar la experiencia visual.
-    - **Optimización de Imágenes:** Carga y visualización de imágenes optimizadas con `next/image`.
-    - **Estados de Carga y Vacío:** Feedback visual durante la carga (skeletons) y mensajes atractivos para listas vacías.
-    - **Búsqueda y Paginación:** Filtrado por estado, búsqueda por texto y paginación eficiente en las listas de gestión.
+  - **Diseño Responsivo:** Interfaz adaptada a móviles y escritorio, con uso de tablas y tarjetas según la resolución.
+  - **Temas Claro/Oscuro:** Selector de tema para personalizar la experiencia visual.
+  - **Optimización de Imágenes:** Carga y visualización de imágenes optimizadas con `next/image`.
+  - **Estados de Carga y Vacío:** Feedback visual durante la carga (skeletons) y mensajes atractivos para listas vacías.
+  - **Búsqueda y Paginación:** Filtrado por estado, búsqueda por texto y paginación eficiente en las listas de gestión.
 - **Gestión de Perfil de Usuario:** Los usuarios pueden gestionar sus credenciales y perfil directamente a través de una interfaz de usuario integrada de Clerk.
 
 ## 🛠️ Stack Tecnológico
@@ -37,16 +37,16 @@ Este proyecto es una **aplicación full-stack moderna y responsiva** diseñada p
 
 ## 🎯 Cómo el Proyecto Cumplió el Reto y sus Mejoras
 
-El reto técnico inicial buscaba una mini-aplicación de solicitudes de herramientas con funcionalidades mínimas como un formulario de 4 campos y visualización en tabla o lista. Este proyecto no solo cumplió con esos requisitos, sino que los **superó y los expandió significativamente**, transformándose en una aplicación full-stack robusta.
+[cite_start]El reto técnico inicial [cite: 9] [cite_start]buscaba una mini-aplicación de solicitudes de herramientas con funcionalidades mínimas como un formulario de 4 campos y visualización en tabla o lista[cite: 12, 17]. Este proyecto no solo cumplió con esos requisitos, sino que los **superó y los expandió significativamente**, transformándose en una aplicación full-stack robusta.
 
 - **Fundamentos Sólidos:** Se construyó sobre **Next.js 14 (App Router)**, **TypeScript** y **Tailwind CSS**, estableciendo una base moderna y escalable.
-- **Base de Datos Real:** La persistencia se logró con **MongoDB Atlas y Mongoose**, moviéndose de una solución en memoria (sugerida como opcional en el reto) a una base de datos real.
+- [cite_start]**Base de Datos Real:** La persistencia se logró con **MongoDB Atlas y Mongoose**, moviéndose de una solución en memoria (sugerida como opcional en el reto [cite: 22]) a una base de datos real.
 - **Autenticación Profesional:** Se implementó un sistema de autenticación de usuarios con roles (`admin`, `employee`) utilizando **Clerk**. Esta decisión técnica se tomó después de una exhaustiva evaluación, optando por Clerk debido a su robustez, facilidad de implementación y excelente manejo del middleware, **descartando soluciones como Auth.js (NextAuth v5) debido a problemas de TypeError e incompatibilidades con el Edge Runtime.**
 - **Gestión Completa de Datos:** Se desarrollaron APIs RESTful para el **CRUD** de herramientas y solicitudes. La gestión de herramientas incluye un inventario de stock y la integración con **Cloudinary** para la subida de imágenes, optimizando el manejo de archivos multimedia.
 - **Experiencia de Usuario Enfocada:** Se prestó especial atención a la UI/UX, asegurando que la aplicación sea **100% responsiva y mobile-first**. La interfaz es moderna, minimalista, y sigue las mejores prácticas de UX/UI, utilizando componentes de **Shadcn/ui** y notificaciones con **Sonner**. La gestión del estado del servidor se centralizó en **Custom Hooks con TanStack Query**, manteniendo los componentes de la UI limpios y enfocados en la presentación. La validación de formularios se manejó eficazmente con **React Hook Form**, **integrando las reglas de validación directamente en el `register` y evitando el acoplamiento a Zod** para mayor flexibilidad.
 - **Dashboards Personalizados:** Se crearon dashboards diferenciados para empleados (sus solicitudes) y un dashboard general para administradores (estadísticas de toda la aplicación), proporcionando visiones de datos claras y relevantes para cada rol.
 - **Funcionalidades de Búsqueda y Paginación:** Para manejar grandes volúmenes de datos, se implementó paginación y búsqueda por texto eficiente, tanto en el frontend como en el backend.
-- **Uso de la Plantilla Base del Reto:** La estructura de componentes del reto original (`FormSolicitud`, `TablaSolicitudes`) fue subsumida y expandida en componentes más modulares y profesionales de Shadcn/ui (ej. `CreateRequestDialog`, `RequestsList`), siguiendo las mejores prácticas para una aplicación escalable.
+- [cite_start]**Uso de la Plantilla Base del Reto:** La estructura de componentes del reto original (`FormSolicitud`, `TablaSolicitudes` [cite: 46, 47]) fue subsumida y expandida en componentes más modulares y profesionales de Shadcn/ui (ej. `CreateRequestDialog`, `RequestsList`), siguiendo las mejores prácticas para una aplicación escalable.
 
 ## ⬆️ Posibles Actualizaciones y Mejoras Futuras
 

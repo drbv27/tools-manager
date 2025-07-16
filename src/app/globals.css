@@ -1,27 +1,107 @@
+/* src/app/globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* MODO CLARO (Light Theme) */
+    /* Aquí se definen los valores de HSL para cada variable CSS */
+
+    /* Fondo general de la aplicación */
+    --background: 44 26% 77%; /* #b6ad90 - Light Beige */
+    /* Color principal del texto y elementos interactivos sobre el background */
+    --foreground: 80 17% 19%; /* #333d29 - Almost Black Olive Green */
+
+    /* Fondos de tarjetas, modales, y secciones con ligera elevación */
+    --card: 44 19% 82%; /* #a68a64 - Warm Gray. Más claro para resaltar sobre background. */
+    /* Texto sobre el color 'card' */
+    --card-foreground: 80 17% 19%; /* #333d29 */
+
+    /* Fondo de popovers, dropdowns y tooltips */
+    --popover: 0 0% 100%; /* Blanco puro, para máxima claridad y contraste en menús */
+    /* Texto sobre el color 'popover' */
+    --popover-foreground: 80 17% 19%; /* #333d29 */
+
+    /* Color principal para botones y elementos interactivos importantes */
+    --primary: 29 54% 32%; /* #7f4f24 - Rich Brown */
+    /* Texto sobre el color 'primary' */
+    --primary-foreground: 0 0% 100%; /* Blanco puro */
+
+    /* Color secundario para botones y elementos menos prominentes */
+    --secondary: 29 42% 40%; /* #936639 - Soft Brown */
+    /* Texto sobre el color 'secondary' */
+    --secondary-foreground: 0 0% 100%; /* Blanco puro */
+
+    /* Color para elementos deshabilitados, texto sutil, etc. */
+    --muted: 44 19% 75%; /* Una versión más clara de #a68a64, para un efecto más "muted" */
+    /* Texto sobre el color 'muted' */
+    --muted-foreground: 80 17% 23%; /* #414833 - Darker muted text */
+
+    /* Color para acentos, iconos de éxito, highlights */
+    --accent: 79 23% 60%; /* #a4ac86 - Olive Green */
+    /* Texto sobre el color 'accent' */
+    --accent-foreground: 80 17% 19%; /* #333d29 */
+
+    /* Color para acciones destructivas (eliminar, error) */
+    --destructive: 0 84% 60%; /* Rojo estándar de Shadcn, muy legible */
+    /* Texto sobre el color 'destructive' */
+    --destructive-foreground: 0 0% 100%; /* Blanco puro */
+
+    /* Colores para bordes y separadores */
+    --border: 44 19% 70%; /* Un tono más suave de tu paleta para bordes sutiles */
+    /* Fondo de inputs */
+    --input: 0 0% 98%; /* Blanco casi puro para inputs, para que no compita con el fondo general */
+    /* Color del anillo de foco al seleccionar un elemento */
+    --ring: 29 54% 32%; /* #7f4f24 - Primary */
+
+    /* Radio de borde global, establecido en tailwind.config.ts también */
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* MODO OSCURO (Dark Theme) */
+    /* Los colores deben ser inversos o complementarios para mantener el contraste */
+
+    --background: 80 17% 19%; /* #333d29 - Almost Black Olive Green (Fondo principal oscuro) */
+    --foreground: 44 26% 77%; /* #b6ad90 - Light Beige (Texto principal sobre fondo oscuro) */
+
+    --card: 80 17% 23%; /* #414833 - Verde Oscuro Profundo (Fondo de tarjetas más oscuro) */
+    --card-foreground: 44 26% 77%; /* #b6ad90 */
+
+    --popover: 80 17% 23%; /* #414833 - Fondo oscuro para popovers */
+    --popover-foreground: 44 26% 77%; /* #b6ad90 */
+
+    --primary: 44 26% 77%; /* #b6ad90 - Light Beige (Botones principales ahora claros) */
+    --primary-foreground: 80 17% 19%; /* #333d29 */
+
+    --secondary: 29 54% 32%; /* #7f4f24 - Rich Brown (Botones secundarios ahora oscuros) */
+    --secondary-foreground: 44 26% 77%; /* #b6ad90 */
+
+    --muted: 80 17% 25%; /* #414833 un poco más claro, para "muted" */
+    --muted-foreground: 44 19% 60%; /* #a68a64 */
+
+    --accent: 79 23% 35%; /* #656d4a - Dark Olive Green (Acento oscuro) */
+    --accent-foreground: 44 26% 77%; /* #b6ad90 */
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 80 17% 23%; /* #414833 - Bordes oscuros */
+    --input: 80 17% 23%; /* #414833 - Inputs oscuros */
+    --ring: 44 26% 77%; /* #b6ad90 */
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@layer base {
+  body {
+    /* Estas clases aplican el background y foreground por defecto al body */
+    @apply bg-background text-foreground;
+    /* Suavizamos el texto para una apariencia moderna */
+    @apply antialiased;
+  }
+  * {
+    /* Aplica el color de borde definido a todos los elementos que usan 'border' */
+    @apply border-border;
   }
 }
