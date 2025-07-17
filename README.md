@@ -2,6 +2,12 @@
 
 Este proyecto es una **aplicación full-stack moderna y responsiva** diseñada para simplificar la gestión de solicitudes de herramientas dentro de una organización. Permite a los colaboradores solicitar y hacer seguimiento de sus herramientas, mientras que los administradores gestionan el inventario, aprueban préstamos y supervisan la operación general.
 
+### ✨ Demo en Vivo
+
+Puedes explorar la aplicación desplegada aquí:
+
+[**https://tools-manager-henna.vercel.app/admin/tools/**](https://tools-manager-henna.vercel.app/admin/tools/)
+
 ## ✨ Características Destacadas
 
 - **Autenticación y Roles Seguros:** Sistema de autenticación robusto con roles de `administrador` y `empleado` utilizando **Clerk**.
