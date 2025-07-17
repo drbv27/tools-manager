@@ -50,6 +50,101 @@ El reto técnico inicial buscaba una mini-aplicación de solicitudes de herramie
 - **Implementadas 2 pruebas unitaris:** Se implementaron pruebas unitarias a un hook (componente puro) y aun componete de renderzacion jsx. Ambas pasaron.
 - **Decisiones tecnicas :** Se cambio la solicitud del reto de trabajar en `pages router` ya que el estandar actual es `app router` y con ese se trabajó. Aunque la version actual de NEXT JS es la `15.4.1` se acogio la version solicitada y trabaje con la version `14.2.30` que es la ultima version estable de la solicitada. Para evitar problema de re-renders y manejos de estado innecesarios que bajan el performance se manejo los formularios (controlled components) con `react-hook-form`.
 
+### 📸 Capturas de Pantalla
+
+<table>
+  <tr>
+    <td align="center">
+      Landing Desktop<br>
+      <img src="https://raw.githubusercontent.com/drbv27/tools-manager/main/public/screen1.jpeg" alt="Landingd" width="400"/>
+    </td>
+    <td align="center">
+      Landing Mobile<br>
+      <img src="https://raw.githubusercontent.com/drbv27/tools-manager/main/public/screen2.jpeg" alt="Landingm" width="400"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      Login Desktop<br>
+      <img src="https://raw.githubusercontent.com/drbv27/tools-manager/main/public/screen3.jpeg" alt="logind" width="400"/>
+    </td>
+    <td align="center">
+      Login Mobile<br>
+      <img src="https://raw.githubusercontent.com/drbv27/tools-manager/main/public/screen4.jpeg" alt="loginm" width="400"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      Own Dash Desktop<br>
+      <img src="https://raw.githubusercontent.com/drbv27/tools-manager/main/public/screen5.jpeg" alt="ownd" width="400"/>
+    </td>
+    <td align="center">
+      Own Dash Mobile<br>
+      <img src="https://raw.githubusercontent.com/drbv27/tools-manager/main/public/screen6.jpeg" alt="ownm" width="400"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      Solicitud Desktop<br>
+      <img src="https://raw.githubusercontent.com/drbv27/tools-manager/main/public/screen7.jpeg" alt="sold" width="400"/>
+    </td>
+    <td align="center">
+      Solicitud Mobile<br>
+      <img src="https://raw.githubusercontent.com/drbv27/tools-manager/main/public/screen8.jpeg" alt="solm" width="400"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      Admin Dash Desktop<br>
+      <img src="https://raw.githubusercontent.com/drbv27/tools-manager/main/public/screen9.jpeg" alt="addd" width="400"/>
+    </td>
+    <td align="center">
+      Admin Dash Mobile<br>
+      <img src="https://raw.githubusercontent.com/drbv27/tools-manager/main/public/screen10.jpeg" alt="addm" width="400"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      Gestion Herramientas Desktop<br>
+      <img src="https://raw.githubusercontent.com/drbv27/tools-manager/main/public/screen11.jpeg" alt="ghd" width="400"/>
+    </td>
+    <td align="center">
+      Gestion Herramientas Mobile<br>
+      <img src="https://raw.githubusercontent.com/drbv27/tools-manager/main/public/screen12.jpeg" alt="ghm" width="400"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      Añadir Herramienta Desktop<br>
+      <img src="https://raw.githubusercontent.com/drbv27/tools-manager/main/public/screen13.jpeg" alt="ahd" width="400"/>
+    </td>
+    <td align="center">
+      Añadir Herramienta Mobile<br>
+      <img src="https://raw.githubusercontent.com/drbv27/tools-manager/main/public/screen14.jpeg" alt="ahm" width="400"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      Gestion Solicitudes Desktop<br>
+      <img src="https://raw.githubusercontent.com/drbv27/tools-manager/main/public/screen15.jpeg" alt="gsd" width="400"/>
+    </td>
+    <td align="center">
+      Gestion Solicitudes Mobile<br>
+      <img src="https://raw.githubusercontent.com/drbv27/tools-manager/main/public/screen16.jpeg" alt="gsm" width="400"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      Modo Claro Desktop<br>
+      <img src="https://raw.githubusercontent.com/drbv27/tools-manager/main/public/screen17.jpeg" alt="mcd" width="400"/>
+    </td>
+    <td align="center">
+      Modo Claro Mobile<br>
+      <img src="https://raw.githubusercontent.com/drbv27/tools-manager/main/public/screen18.jpeg" alt="mcm" width="400"/>
+    </td>
+  </tr>
+  </table>
+
 ## ⬆️ Posibles Actualizaciones y Mejoras Futuras
 
 Aunque la aplicación está funcionalmente completa, siempre hay espacio para la evolución:
