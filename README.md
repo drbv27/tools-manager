@@ -102,11 +102,11 @@ Para ejecutar este proyecto localmente:
     # NEXT_PUBLIC_CLERK_SIGN_UP_FALLBACK_REDIRECT_URL=/
     ```
 
-4.  **Ejecuta el script de seeding (opcional, para crear un admin inicial):**
-    ```bash
-    npm run seed:admin
     ```
-5.  **Inicia el servidor de desarrollo:**
+
+    ```
+
+4.  **Inicia el servidor de desarrollo:**
 
     ```bash
     npm run dev
