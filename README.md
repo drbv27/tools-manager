@@ -47,6 +47,8 @@ El reto técnico inicial buscaba una mini-aplicación de solicitudes de herramie
 - **Dashboards Personalizados:** Se crearon dashboards diferenciados para empleados (sus solicitudes) y un dashboard general para administradores (estadísticas de toda la aplicación), proporcionando visiones de datos claras y relevantes para cada rol.
 - **Funcionalidades de Búsqueda y Paginación:** Para manejar grandes volúmenes de datos, se implementó paginación y búsqueda por texto eficiente, tanto en el frontend como en el backend.
 - **Uso de la Plantilla Base del Reto:** La estructura de componentes del reto original (`FormSolicitud`, `TablaSolicitudes`) fue subsumida y expandida en componentes más modulares y profesionales de Shadcn/ui (ej. `CreateRequestDialog`, `RequestsList`), siguiendo las mejores prácticas para una aplicación escalable.
+- **Implementadas 2 pruebas unitaris:** Se implementaron pruebas unitarias a un hook (componente puro) y aun componete de renderzacion jsx. Ambas pasaron.
+- **Decisiones tecnicas :** Se cambio la solicitud del reto de trabajar en `pages router` ya que el estandar actual es `app router` y con ese se trabajó. Aunque la version actual de NEXT JS es la `15.4.1` se acogio la version solicitada y trabaje con la version `14.2.30` que es la ultima version estable de la solicitada. Para evitar problema de re-renders y manejos de estado innecesarios que bajan el performance se manejo los formularios (controlled components) con `react-hook-form`.
 
 ## ⬆️ Posibles Actualizaciones y Mejoras Futuras
 
@@ -55,11 +57,12 @@ Aunque la aplicación está funcionalmente completa, siempre hay espacio para la
 - **Módulo de Gestión de Usuarios para Admin:** Permitir al administrador ver y gestionar (cambiar roles, deshabilitar) usuarios directamente desde la aplicación (usando el Backend SDK de Clerk), en lugar de solo vía el dashboard de Clerk.
 - **Notificaciones con Enlaces Dinámicos Avanzados:** Hacer que cada notificación tenga un enlace directo al detalle del recurso al que se refiere (ej., clic en "Solicitud Aprobada" redirige a la vista detallada de esa solicitud).
 - **Visualización de Datos Adicional:** Incorporar gráficos o métricas visuales en los dashboards para una comprensión más rápida de los datos.
+- **Eliminacion y edicion de solicitudes:** Incorporar funcionalidad para que un usuario gestione sus propias solicitudes y que el admin las gestione todas.
 - **Control de Versiones de Herramientas/Solicitudes:** Implementar un historial de cambios para herramientas o solicitudes.
 - **Filtros de Búsqueda Adicionales:** Añadir filtros por rango de fechas, o búsquedas más avanzadas por campos específicos.
 - **Revisión y Refinamiento de ESLint:** Aunque el `build` es exitoso, algunas reglas de linter fueron deshabilitadas puntualmente para garantizar la finalización del proyecto a tiempo. Se recomienda una revisión exhaustiva para eliminar el uso de `any` y otras advertencias.
 - **Manejo de Errores Frontend Más Granular:** Implementar una estrategia de `Error Boundaries` para capturar y mostrar errores de componentes de forma controlada.
-- **Testing:** Añadir pruebas unitarias, de integración y end-to-end (ej., con Jest/React Testing Library, Cypress/Playwright).
+- **Testing:** Añadir mas pruebas unitarias, de integración y end-to-end .
 - **Despliegue Continuo (CI/CD):** Configurar un pipeline de CI/CD para automatizar pruebas y despliegues. **Es importante destacar que el proceso de subir cambios a GitHub y desplegar automáticamente en Vercel ya sienta las bases para un flujo de CI/CD básico, aunque un CI/CD completo implicaría también la ejecución automática de pruebas y análisis de código.**
 - **Documentación Adicional:** Generar documentación de componentes con **Storybook** y documentación de API con **Swagger/OpenAPI**.
 - **Internacionalización (i18n):** Soporte para múltiples idiomas.
@@ -112,12 +115,10 @@ Para ejecutar este proyecto localmente:
     npm run dev
     ```
 
-    Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
+    Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver la aplicación (o el que te indique NEXT si tienes otros proyectos corriendo).
 
-## 👨‍💻 Autor
+## 📫 Contacto
 
-**Diego Bonilla**
-
-[![Email](https://img.shields.io/badge/Email-drbv27%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:drbv27@gmail.com)
-[![GitHub](https://img.shields.io/badge/GitHub-drbv27-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/drbv27)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Diego%20Bonilla-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/diego-ricardo-bonilla-villa-7179254a/)
+[![GitHub](https://img.shields.io/badge/GitHub-drbv27-181717?logo=github)](https://github.com/drbv27)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-DiegoBonilla-0A66C2?logo=linkedin)](https://www.linkedin.com/in/diego-ricardo-bonilla-villa-7179254a/)
+[![Email](https://img.shields.io/badge/Email-DiegoBonilla-D14836?logo=gmail)](mailto:drbv27@gmail.com)
