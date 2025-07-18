@@ -1,3 +1,4 @@
+//src/models/Tool.ts
 import mongoose, { Schema, Document } from "mongoose";
 
 export interface ITool extends Document {

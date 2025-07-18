@@ -1,3 +1,4 @@
+//src/app/(main)/admin/dashboard/page.tsx
 "use client";
 
 import { useAdminDashboardStats } from "@/hooks/useAdminDashboardStats";
